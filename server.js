@@ -8,6 +8,13 @@ connectDB();
 
 app.get('/', (req, res) => res.send('API Running'));
 
+//define routes
+//app.use(arg1: declare route, arg2: specify which file to use for said route)
+app.use('/api/users', require('./routes/api/users'));
+app.use('/api/auth', require('./routes/api/auth'));
+app.use('/api/profile', require('./routes/api/profile'));
+app.use('/api/posts', require('./routes/api/posts'));
+
 //dynamically figure out which port to use
 //If no port environment variable, use 5000
 const PORT = process.env.PORT || 5000;
