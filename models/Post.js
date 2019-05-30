@@ -5,7 +5,7 @@ const PostSchema = new Schema({
 	//associate post with a user
 	user: {
 		type: Schema.Types.ObjectId,
-		ref: "user"
+		ref: "users"
 	},
 	text: {
 		type: String,
