@@ -48,7 +48,7 @@ router.post(
 			//See if user exists
 			let user = await User.findOne({ email });
 
-			/* If the user exists, return error with JSON */
+			/* If the user does not exist, return error with JSON */
 			if (!user) {
 				return res
 					.status(400)
